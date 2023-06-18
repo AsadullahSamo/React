@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ES6 Refresher </title>
+</head>
+<body>
+    
+    <script>
+        class Customer{
+            constructor(n, age){
+                this.name = n;
+                this.age = age;
+            }
+
+            gender = "male";    // Now this is also property of constructor
+            buy(){
+                console.log("I'm buying...");
+            }
+            intro = () => {
+                console.log(`My name is ${this.name} and my age is ${this.age}`)
+            }
+        }    // end of class Customer
+
+        // Inheritance
+        class GuestCustomer extends Customer{
+            sayHi(){
+                console.log("Hi!");
+            }
+        }
+
+        let customer1 = new Customer("Asad", 18);
+        console.log(customer1);
+
+        let guestCustomer1 = new GuestCustomer("Junaid", 27);
+        guestCustomer1.intro();
+        guestCustomer1.sayHi();
+
+
+        // Spread and Rest operator
+        let person = {
+            name: "Asad",
+            age: 18
+        }
+        let newPerson = {
+            ...person, 
+            city: "Tando Allahyar"
+        }
+
+        console.log(newPerson);
+        
+        console.log("\n\n\t\t\t\t\t\t\t\t\t\t Refrence and Primitive types")
+        //  Reference(Array, Object) and Primitive (String, number, boolean)
+        let num1 = 10;
+        let num2 = num1;          // num1 is copied into num2;
+        console.log(`Before changing num2: num1 =  ${num1}`);
+        console.log(`Before changing num2: num2 = ${num2}`);
+
+        num2 = 15;
+        console.log(`After changing num2: num1 =  ${num1}`);
+        console.log(`After changing num2: num2 = ${num2}`);
+
+        let person1 = {
+            name: "Asad"
+        }
+
+        let person2 = person1;        // Person2 points person1, so if we change person2, person1 will also be changed
+        console.log(`Before changing person2: person1 = ${person1.name}`)
+        console.log(`Before changing person2: person2 = ${person2.name}`)
+
+        person2.name = "Junaid";
+        console.log(`After changing person2: person1 = ${person1.name}`)
+        console.log(`After changing person2: person2 = ${person2.name}`)
+
+        // if we wanna copy person1 into person2, instead of referencing
+        let person3 = {
+            ...person1
+        }
+        console.log(person3)
+        person3.name = "Mohsin";
+
+        console.log(person1)
+        console.log(person3)
+    </script>
+
+</body>
+</html>

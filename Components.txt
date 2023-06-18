@@ -1,0 +1,4 @@
+Component can be one tag or combination of tags
+Components in React are reusable building block in UI.
+Only make components of those, tag or combination of tags, which will be reused
+Component can be used inside another component
