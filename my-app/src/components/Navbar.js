@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 export default function Navbar(props) {
-  
+  const location = useLocation();  
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
@@ -12,20 +12,34 @@ export default function Navbar(props) {
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/home">{props.home}</Link>
+          <Link className={`nav-link ${location.pathname==="/home" ? "active": ""}`} aria-current="page" to="/home">{props.home}</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/about">{props.link}</Link>
+          <Link className={`nav-link ${location.pathname==="/about" ? "active" : ""}`} to="/about">{props.link}</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/UseEffectHook">useEffect</Link>
+          <Link className={`nav-link ${location.pathname==="/UseEffectHook" ? "active" : ""}`} to="/UseEffectHook">useEffect</Link>
+        </li>
+        <li className="nav-item">
+          <Link className={`nav-link ${location.pathname==="/UseId" ? "active" : ""}`} to="/UseId">useId</Link>
+        </li>
+        <li className="nav-item">
+          <Link className={`nav-link ${location.pathname==="/useTransition" ? "active" : ""}`} to="/useTransition">useTransition</Link>
+        </li>
+        <li className="nav-item">
+          <Link className={`nav-link ${location.pathname==="/UseMemoHook" ? "active" : ""}`} to="/UseMemoHook">useMemo</Link>
+        </li>
+        <li className="nav-item">
+          <Link className={`nav-link ${location.pathname==="/useContext" ? "active" : ""}`} to="/useContext">useContext</Link>
         </li>
       </ul>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-        <label class="form-check-label" htmlFor="flexSwitchCheckDefault">Switch</label>
+
+      <div className="form-check form-switch">
+        <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+        <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Switch</label>
       </div>
     </div>
   </div>

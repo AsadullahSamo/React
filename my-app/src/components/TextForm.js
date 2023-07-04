@@ -3,8 +3,7 @@ import Alert from './Alert';
 
 export default function TextForm(props) {
   const [title, setTitle] = useState("Initial")
-  const [convertedText, setConvertedText] = useState("");       // useState() returns one variable and one function, and we store both of them using array destructuring
-  const [btnText, newBtnText] = useState("Enable Dark Mode");
+  const [btnText, newBtnText] = useState("Enable Dark Mode");       // useState() returns one variable and one function, and we store both of them using array destructuring
   const [style, newStyle] = useState({
     color: "black",
     background: "white"

@@ -6,7 +6,7 @@ export default function UseEffectHook() {
         window.addEventListener("resize", handleResize)
 
         return () => {
-            window.removeEventListener("resize");           // To clean useEffect and improve performance
+            window.removeEventListener("resize", handleResize);           // To clean useEffect and improve performance
         }
     }, [])
 
