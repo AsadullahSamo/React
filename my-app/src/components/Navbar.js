@@ -35,6 +35,9 @@ export default function Navbar(props) {
         <li className="nav-item">
           <Link className={`nav-link ${location.pathname==="/useContext" ? "active" : ""}`} to="/useContext">useContext</Link>
         </li>
+        <li className="nav-item">
+          <Link className={`nav-link ${location.pathname==="/Form" ? "active" : ""}`} to="/Form">Form</Link>
+        </li>
       </ul>
 
       <div className="form-check form-switch">

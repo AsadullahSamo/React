@@ -1,0 +1,33 @@
+.rounded {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.roundedQuote {
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+}
+
+.arrow {
+  white-space: pre;
+  color: #3c3799;
+  font-weight: 400;
+  font-size: 25px;
+  margin-right: 25px;
+}
+.arrow:hover {
+  transition: all 0.5s;
+  color: #7f7cb6;
+  cursor: pointer;
+}
+
+.shadow {
+  box-shadow: 8px -2px 0 3px #645cff;
+}
+
+@media screen and (max-width: 550px) {
+  .roundedQuote {
+    left: 35%;
+  }
+}

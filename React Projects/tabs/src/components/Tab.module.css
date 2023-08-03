@@ -1,0 +1,11 @@
+li:hover span.pipe {
+  visibility: visible;
+}
+
+.active {
+  color: #12b8a6;
+}
+
+.borderBottom {
+  border-bottom: 1px solid #12b8a6;
+}

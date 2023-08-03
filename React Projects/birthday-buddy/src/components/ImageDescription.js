@@ -6,7 +6,6 @@ export default function ImageDescription(props) {
   
   return (
     
-    // props.hideImage &&
     <div>
       <figure>
         

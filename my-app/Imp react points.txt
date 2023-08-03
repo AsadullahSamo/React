@@ -1,0 +1,2 @@
+. JSX stands for Javascript XML, which is HTML that has flavor of JS
+. JSX returns plain js objects

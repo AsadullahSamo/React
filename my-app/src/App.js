@@ -11,6 +11,8 @@ import UseTransitionHook from './components/UseTransitionHook';
 import UseMemoHook from './components/UseMemoHook';
 import UseContext from './components/useContext';
 import State from './context/state';
+import Form from './components/Form';
+
 
 export const ThemeContext = React.createContext();
 function App(props) {
@@ -50,6 +52,7 @@ function App(props) {
         <Route exact path="/useTransition" element={<UseTransitionHook />} />        
         <Route exact path="/UseMemoHook" element={<UseMemoHook />} />        
         <Route exact path="/useContext" element={<UseContext />} />        
+        <Route exact path="/Form" element={<Form />} />        
       </Routes>
     </Router>
     </State>
